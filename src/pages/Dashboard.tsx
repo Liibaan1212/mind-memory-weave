@@ -56,9 +56,13 @@ const Dashboard = () => {
               <Button variant="ghost" size="sm" asChild>
                 <Link to="/chat">Chat</Link>
               </Button>
-              <div className="w-10 h-10 bg-gradient-to-br from-memory-warm to-memory-calm rounded-full flex items-center justify-center">
-                <User className="h-5 w-5 text-white" />
-              </div>
+              <Button variant="ghost" size="sm" asChild>
+                <Link to="/profile">
+                  <div className="w-10 h-10 bg-gradient-to-br from-memory-warm to-memory-calm rounded-full flex items-center justify-center">
+                    <User className="h-5 w-5 text-white" />
+                  </div>
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -78,29 +82,33 @@ const Dashboard = () => {
 
         {/* Primary Actions */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          <Card className="shadow-memory border-0 gradient-memory group hover:scale-105 transition-transform cursor-pointer">
-            <CardHeader className="text-center pb-4">
-              <div className="mx-auto w-16 h-16 bg-primary rounded-full flex items-center justify-center group-hover:bg-primary/90 transition-colors">
-                <Plus className="h-8 w-8 text-primary-foreground" />
-              </div>
-            </CardHeader>
-            <CardContent className="text-center pt-0">
-              <CardTitle className="text-lg mb-2">Add New Thought</CardTitle>
-              <p className="text-sm text-muted-foreground">Write your thoughts, memories, and insights</p>
-            </CardContent>
-          </Card>
+          <Link to="/add-thought">
+            <Card className="shadow-memory border-0 gradient-memory group hover:scale-105 transition-transform cursor-pointer">
+              <CardHeader className="text-center pb-4">
+                <div className="mx-auto w-16 h-16 bg-primary rounded-full flex items-center justify-center group-hover:bg-primary/90 transition-colors">
+                  <Plus className="h-8 w-8 text-primary-foreground" />
+                </div>
+              </CardHeader>
+              <CardContent className="text-center pt-0">
+                <CardTitle className="text-lg mb-2">Add New Thought</CardTitle>
+                <p className="text-sm text-muted-foreground">Write your thoughts, memories, and insights</p>
+              </CardContent>
+            </Card>
+          </Link>
 
-          <Card className="shadow-memory border-0 gradient-memory group hover:scale-105 transition-transform cursor-pointer">
-            <CardHeader className="text-center pb-4">
-              <div className="mx-auto w-16 h-16 bg-memory-warm rounded-full flex items-center justify-center group-hover:bg-memory-warm/90 transition-colors">
-                <Mic className="h-8 w-8 text-white" />
-              </div>
-            </CardHeader>
-            <CardContent className="text-center pt-0">
-              <CardTitle className="text-lg mb-2">Record Voice Memory</CardTitle>
-              <p className="text-sm text-muted-foreground">Speak your thoughts naturally</p>
-            </CardContent>
-          </Card>
+          <Link to="/voice-recorder">
+            <Card className="shadow-memory border-0 gradient-memory group hover:scale-105 transition-transform cursor-pointer">
+              <CardHeader className="text-center pb-4">
+                <div className="mx-auto w-16 h-16 bg-memory-warm rounded-full flex items-center justify-center group-hover:bg-memory-warm/90 transition-colors">
+                  <Mic className="h-8 w-8 text-white" />
+                </div>
+              </CardHeader>
+              <CardContent className="text-center pt-0">
+                <CardTitle className="text-lg mb-2">Record Voice Memory</CardTitle>
+                <p className="text-sm text-muted-foreground">Speak your thoughts naturally</p>
+              </CardContent>
+            </Card>
+          </Link>
 
           <Card className="shadow-memory border-0 gradient-memory group hover:scale-105 transition-transform cursor-pointer">
             <CardHeader className="text-center pb-4">
@@ -114,17 +122,19 @@ const Dashboard = () => {
             </CardContent>
           </Card>
 
-          <Card className="shadow-memory border-0 gradient-memory group hover:scale-105 transition-transform cursor-pointer">
-            <CardHeader className="text-center pb-4">
-              <div className="mx-auto w-16 h-16 bg-memory-nostalgic rounded-full flex items-center justify-center group-hover:bg-memory-nostalgic/90 transition-colors">
-                <MessageCircle className="h-8 w-8 text-white" />
-              </div>
-            </CardHeader>
-            <CardContent className="text-center pt-0">
-              <CardTitle className="text-lg mb-2">Talk to My Brain</CardTitle>
-              <p className="text-sm text-muted-foreground">Ask questions and seek wisdom</p>
-            </CardContent>
-          </Card>
+          <Link to="/chat">
+            <Card className="shadow-memory border-0 gradient-memory group hover:scale-105 transition-transform cursor-pointer">
+              <CardHeader className="text-center pb-4">
+                <div className="mx-auto w-16 h-16 bg-memory-nostalgic rounded-full flex items-center justify-center group-hover:bg-memory-nostalgic/90 transition-colors">
+                  <MessageCircle className="h-8 w-8 text-white" />
+                </div>
+              </CardHeader>
+              <CardContent className="text-center pt-0">
+                <CardTitle className="text-lg mb-2">Talk to My Brain</CardTitle>
+                <p className="text-sm text-muted-foreground">Ask questions and seek wisdom</p>
+              </CardContent>
+            </Card>
+          </Link>
         </div>
 
         {/* Recent Activity */}

@@ -8,6 +8,8 @@ import Dashboard from "./pages/Dashboard";
 import AddThought from "./pages/AddThought";
 import Timeline from "./pages/Timeline";
 import Chat from "./pages/Chat";
+import Profile from "./pages/Profile";
+import VoiceRecorder from "./pages/VoiceRecorder";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +26,8 @@ const App = () => (
           <Route path="/add-thought" element={<AddThought />} />
           <Route path="/timeline" element={<Timeline />} />
           <Route path="/chat" element={<Chat />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/voice-recorder" element={<VoiceRecorder />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

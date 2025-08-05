@@ -15,9 +15,15 @@ import {
   Settings
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import HeirAccessPanel from "@/components/HeirAccessPanel";
 
 const Profile = () => {
+  const [showHeirPanel, setShowHeirPanel] = useState(false);
+
   return (
+    <>
+      {showHeirPanel && <HeirAccessPanel onClose={() => setShowHeirPanel(false)} />}
     <div className="min-h-screen bg-background">
       {/* Top Navigation */}
       <nav className="border-b border-border bg-card">
@@ -111,7 +117,7 @@ const Profile = () => {
               </p>
               <div className="space-y-2">
                 <Input placeholder="Add heir email address" />
-                <Button size="sm">Add Heir</Button>
+                <Button size="sm" onClick={() => setShowHeirPanel(true)}>Add Heir</Button>
               </div>
             </div>
             <Separator />
@@ -179,6 +185,7 @@ const Profile = () => {
         </Card>
       </main>
     </div>
+    </>
   );
 };
 

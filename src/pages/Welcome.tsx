@@ -16,8 +16,8 @@ const Welcome = () => {
           <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">About</Link>
           <Link to="/use-cases" className="text-muted-foreground hover:text-primary transition-colors">Use Cases</Link>
           <Link to="/legacy" className="text-muted-foreground hover:text-primary transition-colors">Legacy</Link>
-          <Button variant="outline" size="sm">Login</Button>
-          <Button size="sm">Sign Up</Button>
+          <Button variant="outline" size="sm" asChild><Link to="/auth?mode=signin">Login</Link></Button>
+          <Button size="sm" asChild><Link to="/auth?mode=signup">Sign Up</Link></Button>
         </div>
       </nav>
 

@@ -11,6 +11,8 @@ import Chat from "./pages/Chat";
 import Profile from "./pages/Profile";
 import VoiceRecorder from "./pages/VoiceRecorder";
 import NotFound from "./pages/NotFound";
+import Auth from "./pages/Auth";
+import Legacy from "./pages/Legacy";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +24,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Welcome />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/legacy" element={<Legacy />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/add-thought" element={<AddThought />} />
           <Route path="/timeline" element={<Timeline />} />
